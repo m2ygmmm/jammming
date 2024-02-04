@@ -1,0 +1,72 @@
+.container {
+    margin: 30px 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Make the container a positioning context for the pseudo-element */
+  }
+  
+  .container::after {
+    content: ''; /* Empty content to create the pseudo-element */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px; /* Adjust the height of the shadow as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); /* Gradient for the shadow effect */
+  }
+  ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+  }
+  
+  .playlistItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .trackContainer {
+    flex-grow: 1; /* Allows the track container to grow and take available space */
+  }
+  
+  .deleteButton {
+    margin-left: 10px; /* Add some space between the track and the delete button */
+    cursor: pointer;
+    border: none;
+    transition: 0.25s;
+    font-size: 1em;
+  }
+  
+  .deleteButton:hover {
+    font-size: 1.5em;
+    transition: 0.25s;
+  }
+
+  .playlistNameSetter{
+    border: none;
+    background-color: transparent;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 2px solid ;
+  }
+
+  .topButtons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .topButtons button{
+    border: none;
+    border-radius: 5px;
+    font-family: 'cabin', sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    opacity: 0.95;
+  }

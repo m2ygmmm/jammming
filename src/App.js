@@ -12,7 +12,7 @@ function App() {
   const [input, setInput] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [playlist, addToPlaylist] = useState([]);
-  const [playlistName, setPlaylistName] = useState('Playlist name')
+  const [playlistName, setPlaylistName] = useState('Playlist name...')
 
   useEffect(() => {
     Spotify.search(input)
@@ -27,8 +27,6 @@ function App() {
   const updatePlaylist = ({result}) => {
     if(!playlist.includes(result)){
       addToPlaylist((prevTest) => [result, ...prevTest]);
-    }else{
-      alert(`${result.name} is already added!`)
     }
 
   };
@@ -67,9 +65,6 @@ useEffect(() => {
     <div className={appStyle.gridParent}>
       <div>
       <SearchBar onSearch={handleInputChange} input={input}/>
-      </div>
-      <div>
-
       </div>
       <div>
         <SearchResults search={input} searchResults={searchResults} updatePlaylist={updatePlaylist}/>

@@ -1,0 +1,41 @@
+.container {
+    margin: 30px 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Make the container a positioning context for the pseudo-element */
+  }
+  
+
+  
+  /* Other styling for the container remains unchanged */
+  
+  
+  .searchBox {
+    margin-bottom: 10px; /* Add some space between the input box and the text */
+    padding: 15px 25px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+  }
+  .searchBox::placeholder {
+    color: black;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .container::after {
+      content: ''; /* Empty content to create the pseudo-element */
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px; /* Adjust the height of the shadow as needed */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); /* Gradient for the shadow effect */
+    }
+  }
+  

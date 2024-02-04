@@ -1,0 +1,41 @@
+.container {
+    margin: 30px 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Make the container a positioning context for the pseudo-element */
+  }
+  
+  .container::after {
+    content: ''; /* Empty content to create the pseudo-element */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px; /* Adjust the height of the shadow as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); /* Gradient for the shadow effect */
+  }
+  ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Add a class for the list items to style them */
+  li {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space between the items */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Make the list item take the full width */
+    margin-bottom: 10px; /* Add some space between list items */
+  }
+  
+  i{
+    border: none;
+    transition: 0.25s;
+  }
+  i:hover{
+    font-size: 1.5em;
+    transition: 0.25s;
+  }
